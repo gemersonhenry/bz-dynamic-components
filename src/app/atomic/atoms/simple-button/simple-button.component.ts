@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-simple-button',
@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SimpleButtonComponent implements OnInit {
 
+  @Input()
+  buttonText = 'Enviar';
+
+  @Input()
+  buttonType = 'primary';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  get buttonTypeClass() {
+    return {
+      'bz-btn--primary': this.buttonType === 'primary',
+      'bz-btn--secondary': this.buttonType === 'secondary',
+      'bz-btn--primary-outline': this.buttonType === 'primary-outline',
+    };
   }
 
 }
