@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-simple-button',
@@ -13,6 +13,9 @@ export class SimpleButtonComponent implements OnInit {
   @Input()
   buttonType = 'primary';
 
+  @Output()
+  buttonClickEvent: EventEmitter<{}> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
@@ -24,6 +27,10 @@ export class SimpleButtonComponent implements OnInit {
       'bz-btn--secondary': this.buttonType === 'secondary',
       'bz-btn--primary-outline': this.buttonType === 'primary-outline',
     };
+  }
+
+  public clickEvent() {
+    this.buttonClickEvent.emit({});
   }
 
 }

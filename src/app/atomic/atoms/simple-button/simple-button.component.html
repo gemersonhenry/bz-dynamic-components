@@ -1,3 +1,5 @@
-<button class="bz-btn" [ngClass]="buttonTypeClass">
+<button class="bz-btn"
+  [ngClass]="buttonTypeClass"
+  (click)="clickEvent($event)">
   {{ buttonText }}
 </button>

@@ -8,6 +8,9 @@ import { SimpleButtonComponent } from './atoms/simple-button/simple-button.compo
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    SimpleButtonComponent,
   ]
 })
 export class AtomicModule { }
