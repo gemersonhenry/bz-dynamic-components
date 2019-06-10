@@ -5,7 +5,25 @@
 <app-simple-button
   buttonText="Agregar nuevo componente"
   buttonType="primary"
-  (buttonClickEvent)="addNewComponent($event)">
+  (buttonClickEvent)="addNewComponent()">
 </app-simple-button>
 
-<div #container></div>
+<app-simple-button
+  buttonText="Imprimir componentes"
+  buttonType="primary"
+  (buttonClickEvent)="printComponents()">
+</app-simple-button>
+
+<app-simple-button
+  buttonText="Limpiar contenedor"
+  buttonType="primary"
+  (buttonClickEvent)="clearContainer()">
+</app-simple-button>
+
+<app-simple-button
+  buttonText="Actualizar mensajes"
+  buttonType="primary"
+  (buttonClickEvent)="updateAlertMessageRefs()">
+</app-simple-button>
+
+<template #container></template>

@@ -12,6 +12,6 @@ import { HomeRoutingModule } from './home-routing.module';
     CommonModule,
     AtomicModule,
     HomeRoutingModule,
-  ]
+  ],
 })
 export class HomeModule { }
